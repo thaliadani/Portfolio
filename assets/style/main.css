@@ -13,9 +13,9 @@
 
 :root {
   --bg-color: #080808;
-  --second-bg-color: #001005;
+  --second-bg-color: #130c10;
   --text-color: white;
-  --main-color: #00ff51;
+  --main-color: #ee8cc2;
 }
 
 body {
@@ -35,7 +35,7 @@ header, main{
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem 4rem;
+  padding: 1.4rem 1rem;
 }
 
 header .menu{
@@ -59,7 +59,8 @@ span{
   color: var(--main-color);
 }
 
-header .menu .links{
+.menu .links{
+  display: none;
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
@@ -80,14 +81,9 @@ header .menu .links{
   border-bottom-left-radius: 1rem;
 }
 
-header .menu .links{
-  display: none;
-}
-
 header .menu .links a{
   text-decoration: none;
   color: var(--text-color);
-  
 }
 
 header .menu .links a:hover{
@@ -95,16 +91,12 @@ header .menu .links a:hover{
   transition: all .3s;
 }
 
-.menu i{
+header .menu #btn-menu{
   position: relative;
   left: 10%;
   color: var(--main-color);
   font-size: 2rem;
   cursor: pointer;
-}
-
-.menu #close-menu{
-  display: none;
 }
 
 .container{
@@ -145,18 +137,12 @@ header .menu .links a:hover{
   font-weight: 500;
 }
 
-.info p{
-  font-size: 1rem;
-  font-weight: 400;
-  padding: 1rem 0;
-}
-
 .info .social-media{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding-bottom: .5rem;
+  padding: 1rem;
 }
 
 .info .social-media a{
@@ -218,7 +204,7 @@ header .menu .links a:hover{
   font-weight: 400;
 }
 
-.services{
+.cards{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,35 +213,31 @@ header .menu .links a:hover{
   padding: 1rem 0;
 }
 
-.services h2{
+.cards h2{
   font-size: 2rem;
   font-weight: 700;
 }
 
-.cards{
+.card{
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  flex-wrap: wrap;
-  padding: 1rem 0;
-}
-
-.card{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
   border-radius: 1rem;
   background-color: var(--main-color);
   color: var(--second-bg-color);
   padding: 2rem;
-  width: 20rem;
+  max-width: 50%;
+  flex-wrap: wrap;
 }
 
-.card i{
-  font-size: 3.5rem;
+.card svg{
+  width: 40px;
+}
+
+.card svg path{
+  fill: var(--bg-color);
 }
 
 .card h3{
@@ -344,7 +326,6 @@ header .menu .links a:hover{
   }
   .container .image img{
     width: 35vw;
-
   }
 
   .container .about{
@@ -363,13 +344,12 @@ header .menu .links a:hover{
   }
 
   header .menu .links{
-    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
     font-weight: 500;
-    position: static;
+    position: relative;
     background: none;
     backdrop-filter: none;
     width: auto;
@@ -378,12 +358,12 @@ header .menu .links a:hover{
     border-left: none;
     border-bottom: none;
     border-bottom-left-radius: 0;
+    color: aliceblue;
   }
   
   header .menu i{
     display: none;
   }
-
   .card{
     width: 30rem;
   }
